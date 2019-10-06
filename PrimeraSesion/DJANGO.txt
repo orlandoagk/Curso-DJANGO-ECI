@@ -23,8 +23,8 @@
 	Probar que sucede cuando direccionas las dos url que creaste anteriormente
 	Crear la carpeta Templates dentro de la aplicación
 	Crear dos plantillas html (puedes dejarlas vacias por ahora) llamadas mostrarRespuestas.html y mostrarPreguntas.html
-	Ahora que las vistas retornen la respectiva plantilla para eso usen render (10.6)
-	Por ultimo vamos a crear las plantillas (templates)			- EXPLICACION DE ORLANDO
+	Ahora coloquemos para que las vistas retornen la respectiva plantilla para eso usen render (10.6)
+	Por ultimo vamos a llenar las plantillas (templates) que crearon anteriormente			- EXPLICACION DE ORLANDO
 	
 	
 	
