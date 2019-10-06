@@ -17,8 +17,9 @@
 	Agregar la aplicacion en settings.py
 	Realizar las migraciones de nuevo
 	Agregar en el admin.py los modelos (10.4)
+	Entrar a la pagina de administración 127.0.0.1:8000/admin		- ACA PUEDEN ADMINISTRAR EL CONTENIDO DE LA BASE DE DATOS, TIENEN QUE ENTRAR CON EL SUPER USUARIO QUE CREARON ANTES, SI COLOCARON OTRO PUERTO AL CORRER EL SERVIDOR DEBEN COLOCAR ESE PUERTO
 	Crear dos vistas, una que se llame mostrarPreguntas(request) y otra mostrarRespuestas(request,pregunta_id) y que ambas retornen un HttpResponse con algun texto
-	Agregar las dos URL de las vistas en Preguntas.urls (10.5)
+	Agregar las dos URL de las vistas creadas anteriormente en Preguntas.urls (10.5)
 	Probar que sucede cuando direccionas las dos url que creaste anteriormente
 	Crear la carpeta Templates dentro de la aplicación
 	Crear dos plantillas html (puedes dejarlas vacias por ahora) llamadas mostrarRespuestas.html y mostrarPreguntas.html
