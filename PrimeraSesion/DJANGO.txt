@@ -1,0 +1,52 @@
+10.1)
+	py -m django --version
+	django-admin startproject nombreProyecto				- CREAR PROYECTO
+	py manage.py runserver							- CORRER EL SERVIDOR
+	py manage.py startapp NombreApp						- CREAR UN APP DENTRO DEL PROYECTO
+	Explicar que es una vista						- EXPLICACION DE ORLANDO
+	Vamos a crear un proyecto llamado "PreguntasRespuestas"			- Por motivos de administracion del laboratorio no podremos ejecutar el comando, por se los cree y ya viene en el repositorio de PrimeraSesion
+	Este tendra una aplicación llamada "Preguntas"
+	Crear una vista de HelloWorld (10.2)
+	Agregar el archivo urls en la aplicación Preguntas			- PUEDEN COPIAR EL QUE ESTA EN PREGUNTAS Y RESPUESTAS
+	py manage.py makemigrations						- CREAR LAS MIGRACIONES (TABLAS DE LOS MODELOS)
+	py manage.py migrate							- REALIZAR CAMBIOS A LAS MIGRACIONES
+	Crear un superuser py manage.py createsuperuser --username USERNAME	- CREAR USUARIO STAFF O SUPER USUARIO
+	Explicar que es un modelo						- EXPLICACION DE ORLANDO
+	Crear los modelos (foto en la carpeta)(10.3)
+	Agregar la aplicacion en settings.py
+	Realizar las migraciones de nuevo
+	Agregar en el admin.py los modelos (10.4)
+	Crear dos vistas, una que se llame mostrarPreguntas(request) y otra mostrarRespuestas(request,pregunta_id) y que ambas retornen un HttpResponse con algun texto
+	Agregar las dos URL de las vistas en Preguntas.urls (10.5)
+	Probar que sucede cuando direccionas las dos url que creaste anteriormente
+	Crear la carpeta Templates dentro de la aplicación
+	Crear dos plantillas html (puedes dejarlas vacias por ahora) llamadas mostrarRespuestas.html y mostrarPreguntas.html
+	Ahora que las vistas retornen la respectiva plantilla para eso usen render (10.6)
+	Por ultimo vamos a crear las plantillas (templates)			- EXPLICACION DE ORLANDO
+	
+	
+	
+
+10.2)	from django.http import HttpResponse
+	def index(request):
+    		return HttpResponse("Hola mundo. Bienvenidos a EciTech")
+
+
+
+10.3) class Pregunta(models.Model):						- PARA AGREGAR UNA CLAVE FORANEA SE USA models.ForeignKey(Nombre_Modelo, on_delete=models.CASCADE)
+	fechaPublicacion = models.DateTimeField('Fecha publicacion')
+	textoPregunta = models.CharField(max_length=200)
+	def __str__(self):
+		return self.textoPregunta
+
+								
+
+10.4)	from .models import *
+	admin.site.register(Pregunta)
+	admin.site.register(Respuesta)
+
+10.5) 	path('mostrarPreguntas',views.mostrarPreguntas,name='mostrarPreguntas'),
+   	path('mostrarRespuestas/<int:pregunta_id>',views.mostrarRespuestas,name="mostrarRespuestas")
+
+10.6) 	from django.shortcuts import render
+	render(request,Nombre_Plantilla.html,argumentos)				-Los argumentos van en un diccionario de este modo {'nombrePrimerArgumento':valorReferenciado,'nombreSegundoArgumento':valorReferenciado}
