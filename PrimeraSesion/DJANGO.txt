@@ -5,9 +5,10 @@
 	py manage.py startapp NombreApp						- CREAR UN APP DENTRO DEL PROYECTO
 	Explicar que es una vista						- EXPLICACION DE ORLANDO
 	Vamos a crear un proyecto llamado "PreguntasRespuestas"			- Por motivos de administracion del laboratorio no podremos ejecutar el comando, por se los cree y ya viene en el repositorio de PrimeraSesion
-	Este tendra una aplicaci髇 llamada "Preguntas"
+	Este tendra una aplicaci贸n llamada "Preguntas"
 	Crear una vista de HelloWorld (10.2)
-	Agregar el archivo urls en la aplicaci髇 Preguntas			- PUEDEN COPIAR EL QUE ESTA EN PREGUNTAS Y RESPUESTAS
+	Asignar un URL a esta vista que creamos anteriormente
+	Agregar el archivo urls en la aplicaci贸n Preguntas			- PUEDEN COPIAR EL QUE ESTA EN PREGUNTAS Y RESPUESTAS
 	py manage.py makemigrations						- CREAR LAS MIGRACIONES (TABLAS DE LOS MODELOS)
 	py manage.py migrate							- REALIZAR CAMBIOS A LAS MIGRACIONES
 	Crear un superuser py manage.py createsuperuser --username USERNAME	- CREAR USUARIO STAFF O SUPER USUARIO
@@ -16,13 +17,14 @@
 	Agregar la aplicacion en settings.py
 	Realizar las migraciones de nuevo
 	Agregar en el admin.py los modelos (10.4)
+	Entrar a la pagina de administraci贸n 127.0.0.1:8000/admin		- ACA PUEDEN ADMINISTRAR EL CONTENIDO DE LA BASE DE DATOS, TIENEN QUE ENTRAR CON EL SUPER USUARIO QUE CREARON ANTES, SI COLOCARON OTRO PUERTO AL CORRER EL SERVIDOR DEBEN COLOCAR ESE PUERTO
 	Crear dos vistas, una que se llame mostrarPreguntas(request) y otra mostrarRespuestas(request,pregunta_id) y que ambas retornen un HttpResponse con algun texto
-	Agregar las dos URL de las vistas en Preguntas.urls (10.5)
+	Agregar las dos URL de las vistas creadas anteriormente en Preguntas.urls (10.5)
 	Probar que sucede cuando direccionas las dos url que creaste anteriormente
-	Crear la carpeta Templates dentro de la aplicaci髇
+	Crear la carpeta Templates dentro de la aplicaci贸n
 	Crear dos plantillas html (puedes dejarlas vacias por ahora) llamadas mostrarRespuestas.html y mostrarPreguntas.html
-	Ahora que las vistas retornen la respectiva plantilla para eso usen render (10.6)
-	Por ultimo vamos a crear las plantillas (templates)			- EXPLICACION DE ORLANDO
+	Ahora coloquemos para que las vistas retornen la respectiva plantilla para eso usen render (10.6)
+	Por ultimo vamos a llenar las plantillas (templates) que crearon anteriormente			- EXPLICACION DE ORLANDO
 	
 	
 	
